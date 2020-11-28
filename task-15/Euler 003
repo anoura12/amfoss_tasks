@@ -1,0 +1,43 @@
+#!/bin/python3
+
+import sys
+
+test_case = input()
+cases = []
+prime_factors = []
+i = 0
+length = 0
+
+def is_integer(n):
+    try:
+        float(n)
+    except ValueError:
+        return False
+    else:
+        return float(n).is_integer()
+
+
+if(is_integer(test_case) == False):
+    sys.exit()
+else:
+   test_case = int(test_case)
+
+for x in range(0,test_case):
+    number = int(input())
+    cases.append(number)
+
+for y in range(0,len(cases)):
+    for counter in range(2,cases[y] + 1):
+        current_case = cases[y]
+        if(current_case % counter == 0):
+            for z in range(1,counter+1):
+                if(counter % z == 0):
+                    i = i + 1
+        if(i == 2):
+            prime_factors.append(counter)
+        i = 0
+    length = len(prime_factors)                
+    print(prime_factors[length - 1])
+    prime_factors = []        
+    
+    
