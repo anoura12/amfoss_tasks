@@ -1,0 +1,19 @@
+types_of_pages = int(input())
+required_pages = input()
+available_pages = input()
+death_note = []
+
+
+required_pages = required_pages.split(" ")
+available_pages = available_pages.split(" ")
+
+for count in range(0,types_of_pages):
+
+  a = int(required_pages[count])
+  b = int(available_pages[count])
+
+  notes = b//a
+  death_note.append(notes)
+ 
+death_note.sort() 
+print(death_note[0])      
