@@ -1,0 +1,53 @@
+#!/bin/python3
+import sys
+
+test_case = input()
+cases = []
+total = 0
+a = 0
+b = 1
+
+def is_integer(n):
+    try:
+        float(n)
+    except ValueError:
+        return False
+    else:
+        return float(n).is_integer()
+
+        
+if(is_integer(test_case) == False):
+    sys.exit()
+else:
+    test_case = int(test_case)
+    
+    if(test_case < 1 or test_case > 10**5):
+        sys.exit()
+
+for x in range(0,test_case):
+    number = int(input())
+    
+    if(number < 10 or number > 4*10**16):
+        sys.exit()
+    else:
+        cases.append(number)
+
+
+for y in range(0,len(cases)):
+    for counter in range(0,cases[y]):
+        current_case  = cases[y]
+        c = a + b
+        a = b
+        b = c
+        if(c < current_case):
+            if (c % 2 == 0):
+                total = total + c 
+        else:
+            a = 0
+            b = 1
+            c = 0
+            break    
+        
+        
+    print(total)
+    total = 0
