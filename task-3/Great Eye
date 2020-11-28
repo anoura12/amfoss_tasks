@@ -1,0 +1,26 @@
+test_cases = input()
+test_cases = int(test_cases)
+result = []
+
+for count in range(0,test_cases):
+  num = input()
+  sentence = input()
+  
+  num = int(num)
+  sentence = sentence.split(" ")
+  length = len(sentence)
+  total = 0
+
+  if num < length:
+    word = sentence[num]
+    for x in word:
+      ascii_value = ord(x)
+      total = total + ascii_value
+    result.append(total)        
+
+  else:
+    total = -1
+    result.append(total) 
+    
+for x in result:
+  print(x)
