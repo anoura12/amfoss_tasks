@@ -1,0 +1,34 @@
+test_cases = int(input())
+cases = []
+a = 1
+b = 2
+c = 3       # values a,b,c are used as placeholders to develop the incredible series
+total = 0
+incredible_series = [1,2,3]
+current_case = 0
+reverse = ""
+for counter in range(0,test_cases):
+    number = int(input())
+    cases.append(number)
+    
+for x in range(3,max(cases)):
+    total = (a + b + c) % (10**9 + 7)
+    incredible_series.append(total)
+    a = b
+    b = c
+    c = total
+    total = 0
+    
+for y in range(0,test_cases):
+    current_case = cases[y]    
+    num = str(incredible_series[current_case-1])
+    num = num[::-1]
+    for z in num:
+        if(z =='0'):
+            num.replace("0", "")
+        else:
+            reverse = reverse + z
+    
+    print(reverse)    
+    reverse = ""
+     
