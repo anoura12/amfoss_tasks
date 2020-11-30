@@ -13,7 +13,7 @@
 | Task - 7 | Ubiquitous  UI (Pending) | 
 | Task - 8 | Perceval (Pending) |
 | Task - 9 | Spammer_Spaghetti (Pending) |
-| Task - 10 | CS50 (Pending) |
+| Task - 10 | CS50 (Did 2 problems of pset1) |
 | Task - 11 | Poster Design |
 | Task - 12 | Codechef Problem (Pending) |
 | Task - 13 | Arduino (Pending) |
